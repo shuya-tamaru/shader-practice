@@ -25,9 +25,9 @@ void main()
 
   float d = length(vUv) *  exp(-length(uv0));
 
-  vec3 col = palette(length(uv0) + i*.4+u_time * 0.04 * .4);
+  vec3 col = palette(length(uv0) + i*.4+u_time * 0.02 * .4);
 
-  d =sin(d*8.0 + u_time * 0.04)/8.0;
+  d =sin(d*8.0 + u_time * 0.02)/8.0;
   d=abs(d);
 
   d= pow(0.01 / d, 1.2);
