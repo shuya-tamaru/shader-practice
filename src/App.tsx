@@ -1,14 +1,17 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useState } from "react";
 
 import "./App.css";
 import Sphere from "./components/Sphere";
 import Interface from "./components/Interface";
-import { useState } from "react";
 import Fract from "./components/Fract";
+import Domain from "./components/Domain";
+import Brain from "./components/Brain";
 
 const getToy = (toy: number) => {
-  const component = toy === 0 ? <Sphere /> : toy === 1 ? <Fract /> : <></>;
+  // const component = toy === 0 ? <Sphere/> : toy === 1 ? <Fract /> : <Domain />;
+  const component = toy === 0 ? <Brain /> : toy === 1 ? <Fract /> : <Domain />;
   return component;
 };
 
@@ -25,9 +28,9 @@ function App() {
         }}
         camera={{
           fov: 75,
-          near: 0.1,
-          far: 200,
-          position: [0, 0, 60],
+          near: 0.01,
+          far: 20000,
+          position: [0, 0, 0.3],
         }}
       >
         <OrbitControls makeDefault />

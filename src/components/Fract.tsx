@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { fracVertexShader } from "../shaders/fracShader/fracVertexShader";
 import { fracFragmentShader } from "../shaders/fracShader/fracFragmentShader";
 
-const gepmetry = new THREE.PlaneGeometry(170, 100, 1000, 1000);
+const geometry = new THREE.PlaneGeometry(170, 100, 1000, 1000);
 const material = new THREE.ShaderMaterial({
   transparent: true,
   wireframe: false,
@@ -24,7 +24,7 @@ const Fract = () => {
   });
   return (
     <>
-      <mesh geometry={gepmetry} material={material} />
+      <mesh geometry={geometry} material={material} />
     </>
   );
 };

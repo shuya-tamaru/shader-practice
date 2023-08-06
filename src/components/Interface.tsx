@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { Dispatch } from "react";
 
-const lists = ["sphere", "fract"];
+const lists = ["sphere", "fract", "domain"];
 
 type Props = {
   setToy: Dispatch<React.SetStateAction<number>>;
@@ -26,7 +26,7 @@ const Interface = ({ setToy }: Props) => {
         color={"#fff"}
         as={IconButton}
         aria-label="Options"
-        icon={<HamburgerIcon boxSize={40} />}
+        icon={<HamburgerIcon boxSize={20} />}
         bg="rgba(0,0,0,0)"
         border="none"
         cursor={"pointer"}
